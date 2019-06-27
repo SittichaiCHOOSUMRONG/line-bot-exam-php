@@ -77,7 +77,7 @@ if($message == "กินไรดี"){
         replyMsg($arrayHeader,$arrayPostData);
     }
    #ตัวอย่าง Message Type "Image"
-    else if($message == "อจน"){
+    else if($message == "อจน ชอบไปไหน"){
         $image_url = "https://singhapayap.com/upload-img/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9B%E0%B9%84%E0%B8%8B%E0%B8%95%E0%B9%8C/file_46.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
