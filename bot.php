@@ -76,6 +76,25 @@ if($message == "กินไรดี"){
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url1;
         replyMsg($arrayHeader,$arrayPostData);
     }
+ #ตัวอย่าง Message Type "Image"
+    else if($message == "อาจารย์นายชอบไปที่ไหน"){
+        $image_url1 = "http://xn--3-7wf0eqe2fle3jzd.weebly.com/uploads/5/5/3/2/55328345/8781637.jpg?472";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url1;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url1;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+  #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
+    else if($message == "ไปบ่อยมั้ย"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "อย่าให้พูดเลยครับ";
+        $arrayPostData['messages'][1]['type'] = "sticker";
+        $arrayPostData['messages'][1]['packageId'] = "1";
+        $arrayPostData['messages'][1]['stickerId'] = "51626512";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     #ตัวอย่าง Message Type "Location"
     else if($message == "บ้านหัวโค้ง"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
