@@ -103,7 +103,7 @@ if($message == "กินไรดี"){
         $arrayPostData['messages'][0]['text'] = "555";
         $arrayPostData['messages'][1]['type'] = "sticker";
         $arrayPostData['messages'][1]['packageId'] = "1";
-        $arrayPostData['messages'][1]['stickerId'] = "2560";
+        $arrayPostData['messages'][1]['stickerId'] = "132";
         replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
