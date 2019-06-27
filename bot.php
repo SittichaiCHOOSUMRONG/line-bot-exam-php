@@ -97,7 +97,7 @@ if($message == "กินไรดี"){
         replyMsg($arrayHeader,$arrayPostData);
     }
  #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
-    else if($message == "สวยยอด"){
+    else if($message == "สวดยอด"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "555";
