@@ -76,13 +76,13 @@ if($message == "กินไรดี"){
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url1;
         replyMsg($arrayHeader,$arrayPostData);
     }
- #ตัวอย่าง Message Type "Image"
+   #ตัวอย่าง Message Type "Image"
     else if($message == "อจน"){
-        $image_url1 = "https://previews.123rf.com/images/izmask/izmask1203/izmask120300101/12928853-vector-of-icon-for-price-bomp-place-for-customer-text.jpg";
+        $image_url = "https://singhapayap.com/upload-img/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9B%E0%B9%84%E0%B8%8B%E0%B8%95%E0%B9%8C/file_46.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url1;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url1;
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
   #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
