@@ -36,11 +36,11 @@
     }
   #ตัวอย่าง Message Type "Image"
     else if($message == "รูปบอมป์"){
-        $image_url = "https://previews.123rf.com/images/izmask/izmask1203/izmask120300101/12928853-vector-of-icon-for-price-bomp-place-for-customer-text.jpg";
+        $image_url1 = "https://previews.123rf.com/images/izmask/izmask1203/izmask120300101/12928853-vector-of-icon-for-price-bomp-place-for-customer-text.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url1;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url1;
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Location"
