@@ -17,6 +17,39 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
         replyMsg($arrayHeader,$arrayPostData);
     }
+ if($message == "ป่ะๆๆ"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ที่ไหนๆ";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+if($message == "ไปไหนดีนะ"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ระเบียงอาชาสิ";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+if($message == "อยู่ตรงไหน"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "โป่งหม้อข้าว";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+if($message == "กินไรดี"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ไม่น่าถาม";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+  #ตัวอย่าง Message Type "Image"
+    else if($message == "ว่ามา"){
+        $image_url = "https://singhapayap.com/upload-img/%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B9%87%E0%B8%9B%E0%B9%84%E0%B8%8B%E0%B8%95%E0%B9%8C/file_46.jpg";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
