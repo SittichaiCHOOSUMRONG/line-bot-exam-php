@@ -78,7 +78,7 @@ if($message == "กินไรดี"){
     }
    #ตัวอย่าง Message Type "Image"
     else if($message == "อจนชอบไปไหน"){
-        $image_url = "https://ngthai.com/app/uploads/2018/12/1-1.jpg";
+        $image_url = "https://kapokclubc888t.weebly.com/uploads/4/7/4/6/47466277/4775463.jpg?518";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
